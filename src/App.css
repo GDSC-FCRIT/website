@@ -2,4 +2,9 @@ body{
   background-image: url("../public/bg.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none; 
+}
+body::-webkit-scrollbar {
+  display: none;
 }

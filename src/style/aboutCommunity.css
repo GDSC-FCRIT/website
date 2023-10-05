@@ -1,0 +1,18 @@
+.AboutCommunityMain{
+    padding: 0rem 4rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.AboutCommunityDiv{
+    width: 55%;
+}
+.knowMoreBtn{
+    padding: .8rem;
+    min-width: 7rem;
+    color: white;
+    border-radius: 1rem;
+    border: 1px solid white;
+    font-size: 1.2rem;
+    background-color: #FABD1D;
+}
