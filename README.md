@@ -5,8 +5,6 @@ Welcome to the Official Website of GDSC FCRIT. This is an open source project so
 ## Technologies Used
 
 - React
-- GitHub API
-- Bootstrap
 - Vanilla CSS
 
 Do star the Repository! ⭐
