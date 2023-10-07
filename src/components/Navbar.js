@@ -47,8 +47,7 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-            <img src="/logo.png" alt="Logo" style={{ marginRight: '8px', height:'2rem' }} />
-            GDSC FCRIT
+            <img src="/navbarLogo.png" alt="Logo" style={{ marginRight: '8px', marginTop: '10px', height:'4rem' }} />
           </Typography>
 
           <Box
