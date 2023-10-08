@@ -18,12 +18,11 @@ Before you begin, make sure you have the following software installed:
 - Node.js (v14.x or higher)
 - npm (comes with Node.js)
 
-### Clone the Repository
+### 1. Cloning the repository
 
 To get a local copy of the project, you can use git or github cli. Run the following command in your terminal:
 
-1. Cloning the repository
-   - Using **git**
+- Using **git**
 
 ```bash
 git clone https://github.com/GDSC-FCRIT/website.git
@@ -41,8 +40,11 @@ gh repo clone GDSC-FCRIT/website
 cd website
 ```
 
-2. Installing the project dependencies
-   - Using **npm**
+### 2. Installing the project dependencies
+
+To install the project dependencies with your favorite package managers use the following commands:
+
+- Using **npm**
 
 ```bash
 npm install
@@ -60,8 +62,11 @@ yarn install
 pnpm install
 ```
 
-3. Starting the project
-   - Using **npm**
+### 3. Starting the project
+
+After installing all the dependencies, you can start the project on your local machine by running these commands:
+
+- Using **npm**
 
 ```bash
 npm start
