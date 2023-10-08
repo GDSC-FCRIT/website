@@ -29,7 +29,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" className="navbarDiv">
+    <AppBar position="fixed" className="navbarDiv">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
