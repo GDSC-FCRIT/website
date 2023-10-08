@@ -20,28 +20,61 @@ Before you begin, make sure you have the following software installed:
 
 ### Clone the Repository
 
-To get a local copy of the project, you can use Git. Run the following command in your terminal:
+To get a local copy of the project, you can use git or github cli. Run the following command in your terminal:
+
+1. Cloning the repository
+   - Using **git**
 
 ```bash
 git clone https://github.com/GDSC-FCRIT/website.git
-Navigate to the project directory:
 
-
+# navigate to project directory
 cd website
+```
 
-Install the project dependencies
-Using npm
+- Using **github cli**
 
+```bash
+gh repo clone GDSC-FCRIT/website
+
+# navigate to project directory
+cd website
+```
+
+2. Installing the project dependencies
+   - Using **npm**
+
+```bash
 npm install
-Using Yarn
+```
 
-If you prefer Yarn, you can also install the dependencies with:
+- Using **yarn**
+
+```bash
 yarn install
-Once the dependencies are installed, you can start the development server. Run the following command:
+```
 
-Using npm
+- Using **pnpm**
 
+```bash
+pnpm install
+```
+
+3. Starting the project
+   - Using **npm**
+
+```bash
 npm start
-Using Yarn
-If you're using Yarn:
+```
+
+- Using **yarn**
+
+```bash
 yarn start
+```
+
+- Using **pnpm**
+
+```bash
+pnpm start
+```
