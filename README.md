@@ -1,47 +1,39 @@
-# Official Website of GDSC FCRIT ✨
+# Official website of GDSC FCRIT ✨
 
-Welcome to the Official Website of GDSC FCRIT. This is an open-source project, so anyone can contribute to it.
+Welcome to the Official Website of GDSC FCRIT. This is an open source project so anyone can contribute to it.
 
 ## Technologies Used
 
 - React
 - Vanilla CSS
 
-**Do star the Repository! ⭐**
-
+Do star the Repository! ⭐
 ## Installation
 
 ### Prerequisites
-
 Before you begin, make sure you have the following software installed:
 
-- Node.js (v14.x or higher)
-- npm (comes with Node.js)
+- [Node.js](https://nodejs.org/) (v14.x or higher)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
 
 ### Clone the Repository
-
 To get a local copy of the project, you can use Git. Run the following command in your terminal:
 
 ```bash
-git clone https://github.com/GDSC-FCRIT/website.git
+git clone https://github.com/GDSC-FCRIT/website.git 
+```
 Navigate to the project directory:
 
+```bash
+cd your-project
+```
 
-cd website
-
-Install the project dependencies
-Using npm
-
+Install the project dependencies using npm:
+```bash
 npm install
-Using Yarn
-
-If you prefer Yarn, you can also install the dependencies with:
-yarn install
+```
 Once the dependencies are installed, you can start the development server. Run the following command:
 
-Using npm
-
+```bash
 npm start
-Using Yarn
-If you're using Yarn:
-yarn start
+```
