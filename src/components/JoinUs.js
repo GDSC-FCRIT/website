@@ -6,7 +6,7 @@ function JoinUs() {
       <div className="joinUs">
         <div className="joinUsContent">
             <div className="logo">
-            <img src="/joinUsLogo.png" alt="Logo" style={{ width:'100%' }} />
+            <img src="/joinUsLogo.png" alt="Logo" style={{ width:'90%' }} />
             </div>
            
         </div>
