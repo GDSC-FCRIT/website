@@ -1,8 +1,6 @@
-import '../style/footer.css'
-
 function Footer(){
     return(
-        <div className="footerDiv">
+        <div className="bg-footer min-h-30">
 
         </div>
     )
