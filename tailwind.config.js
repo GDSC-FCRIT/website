@@ -43,7 +43,7 @@ module.exports = {
         'fullcircle': '220px',
         'half': '150px',
       },
-      height: {
+      minHeight: {
         'joinus': '70vh',
         'joinus2': '40vh',
         'scrolling': '300px',
