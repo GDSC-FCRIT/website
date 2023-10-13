@@ -12,7 +12,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import '../style/navbar.css';
+import { Link } from 'react-router-dom';
+// import '../style/navbar.css';
 
 const pages = ['Home', 'Chapter', 'About Us', 'Team'];
 
@@ -29,7 +30,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="fixed" className="navbarDiv">
+    <AppBar position="fixed" className="bg-white text-white">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -101,11 +102,9 @@ function Navbar() {
               paddingRight: 2,
             }}
           >
-            {pages.map((page) => (
-              <Button key={page} sx={{ color: 'black', ml: 2 }}>
-                {page}
-              </Button>
-            ))}
+            <Button sx={{ color: 'black', ml: 2 }} component={Link} to="/">Home</Button>
+            <Button sx={{ color: 'black', ml: 2 }} component={Link} to="/chapter">Chapter</Button>
+            <Button sx={{ color: 'black', ml: 2 }} component={Link} to="/team">Team</Button>
           </Box>
         </Toolbar>
       </Container>

@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import ScrollingCircles from '../components/ScrollingCircles';
 function Main() {
   return (
-    <div className="App">
+    <div className="block">
       <Navbar></Navbar>
       <JoinUs></JoinUs>
       <Features/>
