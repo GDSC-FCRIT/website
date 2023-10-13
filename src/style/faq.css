@@ -1,0 +1,65 @@
+.FaqMainContainer {
+  background-color: #fff;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.FaqMainDiv {
+  background-color: #fff;
+  border-radius: 1px;
+  padding: 20px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #4285f4;
+  text-align: center;
+}
+
+.item {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.icon::before {
+    content: '+';
+    margin-right: 10px;
+    font-size: 20px;
+    display: inline-block;
+  }
+  
+  .icon.minus::before {
+    content: '-';
+  }
+  
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.ques h2 {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+  display: inline;
+}
+
+.ans {
+  display: none;
+  padding: 10px;
+}
+
+.ans.open {
+  display: block;
+}
+
+.ans h3 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: lighter;
+}
