@@ -13,102 +13,99 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
-// import '../style/navbar.css';
+import { CSSTransition } from 'react-transition-group';
+import '../style/navbar.css';
 
 const pages = ['Home', 'Chapter', 'About Us', 'Team'];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [isNavMenuOpen, setIsNavMenuOpen] = React.useState(false);
 
   const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+    if (isNavMenuOpen) {
+      setAnchorElNav(null);
+      setIsNavMenuOpen(false);
+    } else {
+      setAnchorElNav(event.currentTarget);
+      setIsNavMenuOpen(true);
+    }
   };
 
   return (
-    <AppBar position="fixed" className="bg-white text-white">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            <img src="/navbarLogo.png" alt="Logo" style={{ marginRight: '8px', marginTop: '10px', height:'4rem' }} />
-          </Typography>
-
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: 'flex', md: 'none' },
-              alignItems: 'center', // Center items vertically in the Box
-            }}
-          >
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="black"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+    <div>
+      <AppBar position="fixed" className="bg-white text-white">
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="#app-bar-with-responsive-menu"
               sx={{
-                display: { xs: 'block', md: 'none' },
+                mr: 2,
+                display: { xs: 'none', md: 'flex' },
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
+              <img src="/navbarLogo.png" alt="Logo" style={{ marginRight: '8px', marginTop: '10px', height: '4rem' }} />
+            </Typography>
+
+            <Box
+              sx={{
+                flexGrow: 1,
+                display: { xs: 'flex', md: 'none' },
+                alignItems: 'center',
+              }}
+            >
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="black"
+              >
+                <MenuIcon />
+              </IconButton>
+            </Box>
+            <Box
+              sx={{
+                display: { xs: 'none', md: 'flex' },
+                alignItems: 'center',
+                justifyContent: 'flex-end',
+                flexGrow: 1,
+                paddingRight: 2,
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+                 <Button key={page} sx={{ color: 'black', ml: 2 }} component={Link} to={`/${page.toLowerCase()}`}>
+                  {page}
+                </Button>
               ))}
-            </Menu>
-          </Box>
-          <Box
-            sx={{
-              display: 'flex',
-              alignItems: 'center', 
-              justifyContent: 'flex-end', 
-              flexGrow: 1,
-              paddingRight: 2,
-            }}
-          >
-            <Button sx={{ color: 'black', ml: 2 }} component={Link} to="/">Home</Button>
-            <Button sx={{ color: 'black', ml: 2 }} component={Link} to="/chapter">Chapter</Button>
-            <Button sx={{ color: 'black', ml: 2 }} component={Link} to="/team">Team</Button>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+      
+      <CSSTransition in={isNavMenuOpen} timeout={300} classNames="menu" unmountOnExit>
+        <div className="menu">
+          {pages.map((page) => (
+            <MenuItem key={page} onClick={handleOpenNavMenu}>
+              {page}
+            </MenuItem>
+          ))}
+        </div>
+      </CSSTransition>
+      {isNavMenuOpen && (
+        <div className="overlay" onClick={handleOpenNavMenu}></div>
+      )}
+    </div>
+ 
   );
 }
 
