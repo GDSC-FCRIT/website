@@ -1,4 +1,4 @@
-
+import './../style/joinus.css';
 function JoinUsWel(){
     return (
         <div className="pb-28 bg-grey backdrop-blur-10 border-b border-solid border-joinus-blue">
@@ -7,8 +7,8 @@ function JoinUsWel(){
                 <h1 className="text-joinuswel font-bold block mt-h1 mb-h1 ms-0 me-0">Welcome, to the Official Website of GDSC FCRIT.</h1>
                 <p className="text-joinuswel-p block ms-0 me-0 mt-p mb-p">Meet and learn with other budding developers and build
                     solutions for local businesses and communities with Google technology.</p><br/>
-                <a href="https://gdsc.community.dev/fr-conceicao-rodrigues-institute-of-technology-navi-mumbai/">
-                    <b className="bg-joinus-blue p-joinus text-center text-white rounded-2xl border-0 border-solid border-black text-joinus-font font-bold">Join the club</b>
+                <a href="https://gdsc.community.dev/fr-conceicao-rodrigues-institute-of-technology-navi-mumbai/" className="join-us-button">
+                    <b>Join the club</b>
                 </a>
             </div>
         </div>

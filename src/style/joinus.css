@@ -1,0 +1,21 @@
+.button-link {
+    text-decoration: none;
+}
+  
+.join-us-button {
+    display: inline-block;
+    padding: 12.8px 32px;
+    background-color: #4385F3;
+    color: #ffffff;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.2rem;
+}
+  
+.join-us-button:hover {
+    background-color: #4385F3;
+    transform: scale(1.05);
+}
+  
