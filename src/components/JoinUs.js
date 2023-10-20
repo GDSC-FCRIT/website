@@ -12,7 +12,6 @@ function JoinUs() {
     </div>
     <JoinUsWel/>
     </div>
-   
   );
 }
 
