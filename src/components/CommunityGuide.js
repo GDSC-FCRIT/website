@@ -27,10 +27,10 @@ function CommunityGuide(){
 
          {showPopup && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-4 rounded-lg w-128">
+          <div className="bg-white p-4 rounded-lg w-128 m-8 sm:m-8 relative">
             <h2 className="text-3xl text-joinus-blue font-bold flex justify-between items-center mb-4 ">Community Guidelines
             <button
-              className=" relative top-0 right-2 p-joinus text-black rounded-2xl  mb-2 cursor-pointer "
+              className="relative top-0 right-0 p-joinus text-black rounded-full w-8 h-10 flex items-center justify-center mb-2 cursor-pointer transition duration-300 hover:bg-red-500"
               onClick={togglePopup}
             >&times;</button></h2>
             <p className="text-gray-800 text-xl">
