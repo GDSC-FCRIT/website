@@ -32,6 +32,13 @@ function Navbar() {
     }
   };
 
+  const scrollJoinUs = () => {
+    const joinUsWelElement = document.getElementById('joinUsWel');
+    if (joinUsWelElement) {
+      joinUsWelElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div>
       <AppBar position="fixed" className="bg-white text-white">
@@ -40,8 +47,7 @@ function Navbar() {
             <Typography
               variant="h6"
               noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
+              onClick={scrollJoinUs}
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
