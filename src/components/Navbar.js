@@ -39,13 +39,6 @@ function Navbar() {
     }
   };
 
-  const scrollJoinUs = () => {
-    const joinUsWelElement = document.getElementById('joinUsWel');
-    if (joinUsWelElement) {
-      joinUsWelElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div>
       <AppBar position="fixed" className="bg-white text-white">
