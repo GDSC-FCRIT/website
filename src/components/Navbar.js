@@ -58,7 +58,7 @@ function Navbar() {
                 textDecoration: 'none',
               }}
             >
-              <img src="/navbarLogo.png" alt="Logo" style={{ marginRight: '8px', marginTop: '10px', height: '4rem' }} />
+              <img src="/navbarLogo.png" alt="Logo" className="mr-2 mt-10 h-16" />
             </Typography>
 
             <Box
