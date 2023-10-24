@@ -29,6 +29,13 @@ function Navbar() {
     setAnchorElNav(null);
   };
 
+  const scrollJoinUs = () => {
+    const joinUsWelElement = document.getElementById('joinUsWel');
+    if (joinUsWelElement) {
+      joinUsWelElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <AppBar position="fixed" className="bg-white text-white">
       <Container maxWidth="xl">
@@ -36,8 +43,7 @@ function Navbar() {
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
+            onClick={scrollJoinUs}
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -48,7 +54,7 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-            <img src="/navbarLogo.png" alt="Logo" style={{ marginRight: '8px', marginTop: '10px', height:'4rem' }} />
+            <img src="/navbarLogo.png" alt="Logo" className="mr-2 mt-10 h-16" />
           </Typography>
 
           <Box
