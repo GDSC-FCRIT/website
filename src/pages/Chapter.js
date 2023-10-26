@@ -1,9 +1,10 @@
+import Navbar from "../components/Navbar";
 
 
 function Chapter() {
   return (
     <div className="block">
-hi
+      <Navbar/>
     </div>
   );
 }

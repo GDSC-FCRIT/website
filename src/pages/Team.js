@@ -1,7 +1,11 @@
+import MeetTeam from "../components/MeetTeam"
+import Navbar from "../components/Navbar"
+
 function Team(){
     return(
         <div>
-            hi
+            <Navbar/>
+            <MeetTeam/>
         </div>
     )
 }
