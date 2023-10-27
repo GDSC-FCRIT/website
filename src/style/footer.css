@@ -1,0 +1,54 @@
+.bg-footer{
+    display: flex;
+}
+.footerLogo{
+    display: flex;
+    justify-content: left;
+}
+.footerContainerLogo{
+    width: 60%;
+}
+.footerContainer{
+    width: 40%;
+}
+.logos{
+    padding-left: 5rem;
+    color: rgb(84,84,84);
+}
+.logosDiv{
+    display: flex;
+    justify-content: left;
+}
+.logosDiv img{
+    width: 4rem;
+
+}
+.github{
+    height: 4rem;
+}
+@media only screen and (max-width: 950px) {
+    .bg-footer{
+        flex-direction: column;
+        padding-left: 0rem !important;
+        padding: 2rem !important;
+        
+    }
+    iframe{
+        width: 250;
+    }
+    .footerContainerLogo{
+    width: 100%;
+    }
+    .footerContainer{
+        width: 100%;
+    }
+    .logoImg{
+        height: 3rem !important;
+    }
+    .github{
+        height: 2.5rem;
+    }
+    .contentImg{
+        width: 14rem !important;
+    }
+}
