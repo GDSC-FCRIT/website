@@ -4,14 +4,14 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
+// import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
+// import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
+// import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+// import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import '../style/navbar.css';
@@ -41,7 +41,7 @@ function Navbar() {
               variant="h6"
               noWrap
               component="a"
-              href="#app-bar-with-responsive-menu"
+              href="/"
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
@@ -52,7 +52,7 @@ function Navbar() {
                 textDecoration: 'none',
               }}
             >
-              <img src="/navbarLogo.png" alt="Logo" style={{ marginRight: '8px', marginTop: '10px', height: '4rem' }} />
+              <img src="/navbarLogo.png" alt="Logo" style={{ marginRight: '8px', marginTop: '10px', height: '4rem' }}/>
             </Typography>
 
             <Box
