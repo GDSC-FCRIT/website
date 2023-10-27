@@ -16,16 +16,18 @@ import React, { useState } from 'react';
 
       <div className="FaqMainContainer">
         <div className="FaqMainDiv">
-        <h1>FAQs</h1>
+        <h2 className='faqHeading'>FAQ's</h2>
           {data.map((item, i) => (
             <div className="item" key={i}>
               <div className="ques" onClick={() => toggleAccordion(i)}>
-              <span className={`icon ${openIndex === i ? 'minus' : 'plus'}`}></span>
+              
                 <h2>{item.question}</h2>
+                <span className={`icon ${openIndex === i ? 'minus' : 'plus'}`}></span>
               </div>
               <div className={`ans ${openIndex === i ? 'open' : ''}`}>
                 <h3>{item.answer}</h3>
               </div>
+              
             </div>
           ))}
         </div>
