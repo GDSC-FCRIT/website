@@ -11,17 +11,17 @@
   margin: 0;
 }
 
-h1 {
+.faqHeading {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #4285f4;
-  text-align: center;
 }
 
 .item {
-  border-bottom: 1px solid #e0e0e0;
-  padding: 10px;
+  border: 1px solid #34A853;
+  border-radius: .5rem;
+  margin: 10px;
+  padding: 2px;
   cursor: pointer;
   transition: background-color 0.2s;
 }
@@ -29,17 +29,20 @@ h1 {
 .icon::before {
     content: '+';
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: 700;
     display: inline-block;
   }
   
   .icon.minus::before {
     content: '-';
+    
   }
   
-
-.item:last-child {
-  border-bottom: none;
+.ques{
+  display: flex;
+  padding: 0rem 1rem;
+  justify-content: space-between;
 }
 
 .ques h2 {
@@ -47,6 +50,7 @@ h1 {
   margin: 0;
   color: #333;
   display: inline;
+  line-height: 40px;
 }
 
 .ans {
