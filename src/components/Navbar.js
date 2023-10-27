@@ -95,7 +95,7 @@ function Navbar() {
       <CSSTransition in={isNavMenuOpen} timeout={300} classNames="menu" unmountOnExit>
         <div className="menu">
           {pages.map((page) => (
-            <MenuItem key={page} onClick={handleOpenNavMenu}>
+            <MenuItem key={page} onClick={handleOpenNavMenu} component={Link} to={`/${page.toLowerCase()}`}>
               {page}
             </MenuItem>
           ))}
