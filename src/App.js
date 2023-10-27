@@ -7,9 +7,10 @@ import Team from './pages/Team';
 function App() {
   return (
     <Router>
-      <div className="block bg-App-bg bg-no-repeat bg-fixed overflow-auto">
+      <div className="block bg-App-bg bg-no-repeat bg-fixed overflow-auto bg-cover">
         <Routes>
           <Route path="/" element={<Main/>} />
+          <Route path="/home" element={<Main/>} />
           <Route path="/chapter" element={<Chapter/>} /> 
           <Route path="/team" element={<Team/>} /> 
         </Routes>
