@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import ScrollingCircles from '../components/ScrollingCircles';
 import HowWeDo from '../components/HowWeDo';
 import CommunityGuide from '../components/CommunityGuide';
+import Join from '../components/Join';
 function Main() {
   return (
     <div className="block">
@@ -15,6 +16,7 @@ function Main() {
       {/* <Features/> */}
       <CommunityGuide/>
       <HowWeDo/>
+      <Join/>
       <Faq/>
       <Footer/>
     </div>

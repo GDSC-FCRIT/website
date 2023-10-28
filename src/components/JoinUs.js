@@ -1,5 +1,4 @@
-// import '../style/joinUs.css'
-import JoinUsWel from './JoinUsWel';
+
 function JoinUs() {
   return (
 
