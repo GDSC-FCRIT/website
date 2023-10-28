@@ -8,6 +8,7 @@ import ScrollingCircles from '../components/ScrollingCircles';
 import HowWeDo from '../components/HowWeDo';
 import CommunityGuide from '../components/CommunityGuide';
 import Join from '../components/Join';
+import FeaturedEvent from '../components/FeaturedEvent';
 function Main() {
   return (
     <div className="block">
@@ -16,6 +17,7 @@ function Main() {
       {/* <Features/> */}
       <CommunityGuide/>
       <HowWeDo/>
+      <FeaturedEvent />
       <Join/>
       <Faq/>
       <Footer/>
