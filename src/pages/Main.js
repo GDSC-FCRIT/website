@@ -7,12 +7,14 @@ import Footer from '../components/Footer';
 import ScrollingCircles from '../components/ScrollingCircles';
 import HowWeDo from '../components/HowWeDo';
 import CommunityGuide from '../components/CommunityGuide';
+import AboutCommunity from '../components/AboutCommunity';
 function Main() {
   return (
     <div className="block">
       <Navbar></Navbar>
       <JoinUs></JoinUs>
       {/* <Features/> */}
+      <AboutCommunity/>
       <CommunityGuide/>
       <HowWeDo/>
       <Faq/>
