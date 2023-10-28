@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         // 'App-bg': "url('/public/bg.png')",
+        'join-bg': "url('/public/joinUsCircle.png')",
       },
       minHeight: {
         '1/2': '50vh',
