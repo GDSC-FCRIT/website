@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'App-bg': "url('/public/bg.png')",
+        // 'App-bg': "url('/public/bg.png')",
       },
       minHeight: {
         '1/2': '50vh',
