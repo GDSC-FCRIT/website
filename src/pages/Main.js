@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import ScrollingCircles from '../components/ScrollingCircles';
 import HowWeDo from '../components/HowWeDo';
 import CommunityGuide from '../components/CommunityGuide';
+import AboutCommunity from '../components/AboutCommunity';
 import Join from '../components/Join';
 import FeaturedEvent from '../components/FeaturedEvent';
 function Main() {
@@ -15,6 +16,7 @@ function Main() {
       <Navbar></Navbar>
       <JoinUs></JoinUs>
       {/* <Features/> */}
+      <AboutCommunity/>
       <CommunityGuide/>
       <HowWeDo/>
       <FeaturedEvent />
