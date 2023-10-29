@@ -11,12 +11,12 @@ function Footer(){
                 <div className='logos'>
                     <h2 className='pl-2'>Stay in touch</h2>
                     <div className='logosDiv'>
-                        <a href=''><img src='/footer/insta.png' alt='insta'className='p-1'/></a>
-                        <a href=''><img src='/footer/link.png' alt='insta' className='p-1'/></a>
-                        <a href=''><img src='/footer/twi.png' alt='insta'className='p-1'/></a>
-                        <a href=''><img src='/footer/discord.png' alt='insta' className='p-1'/></a>
-                        <a href=''><img src='/footer/github.png' alt='insta'className='p-1 github' /></a>
-                        <a href=''><img src='/footer/gdsc.png' alt='insta' className='p-1'/></a>
+                        <a href='https://www.instagram.com/gdscfcrit/'><img src='/footer/insta.png' alt='instagram'className='p-1'/></a>
+                        <a href='https://www.linkedin.com/company/gdsc-fcrit/'><img src='/footer/link.png' alt='linkedin' className='p-1'/></a>
+                        <a href='https://twitter.com/gdscfcrit'><img src='/footer/twi.png' alt='twitter'className='p-1'/></a>
+                        <a href='https://discord.com/invite/vxmxQNtvD9'><img src='/footer/discord.png' alt='discord' className='p-1'/></a>
+                        <a href='https://github.com/GDSC-FCRIT'><img src='/footer/github.png' alt='github'className='p-1 github' /></a>
+                        <a href='https://gdsc.community.dev/fr-conceicao-rodrigues-institute-of-technology-navi-mumbai/'><img src='/footer/gdsc.png' alt='gdsc-membership' className='p-1'/></a>
                     </div>
                 </div>
             </div>
