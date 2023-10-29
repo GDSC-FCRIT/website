@@ -2,9 +2,10 @@
 function JoinUs() {
   return (
 
+
       <div className="w-full flex justify-center h-joinus pt-24 min-h-screen border-b-2 items-center">
         <div className="">
-            <div className="logo">
+            <div className="logo flex justify-center">
             <img src="/mainLOGO.png" alt="Logo" style={{ width: '100%', transform: 'scale(0.9)' }} />
             </div>
             <div className='flex justify-center'>

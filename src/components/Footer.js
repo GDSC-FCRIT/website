@@ -1,5 +1,4 @@
-import { height } from '@mui/system';
-import '../style/footer.css'
+import '../style/footer.css';
 function Footer(){
     return(
         <div className="bg-footer min-h-30 p-8 pl-14 ">
@@ -21,7 +20,7 @@ function Footer(){
                 </div>
             </div>
             <div className='footerContainer'>
-            <iframe src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJq8XY4MrG5zsR2KIsZh1I9Ls&key=AIzaSyDt8h-rzbLkYfyBCGUMqhUGPMLllcRlORo" width="320" height="180" frameborder="0" style={{border:'1px solid black'}} allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJq8XY4MrG5zsR2KIsZh1I9Ls&key=AIzaSyDt8h-rzbLkYfyBCGUMqhUGPMLllcRlORo" width="320" height="180" style={{border:'1px solid black'}} allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
 
             </div>
 
