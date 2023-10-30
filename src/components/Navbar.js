@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState, useEffect } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -32,30 +33,31 @@ function Navbar() {
     }
   };
 
+  const [isLGScreen, setIsLGScreen] = useState(window.matchMedia('(min-width: 1024px)').matches);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 1024px)');
+    const updateScreenSize = () => setIsLGScreen(mediaQuery.matches);
+
+    mediaQuery.addEventListener('change', updateScreenSize);
+    return () => {
+      mediaQuery.removeEventListener('change', updateScreenSize);
+    };
+  }, []);
+
+  const dynamicStyles = {
+    marginRight: '8px',
+    marginTop: '10px',
+    height: isLGScreen ? '4rem' : '2rem',
+  };
+
+  
   return (
     <div>
       <AppBar position="fixed" className="bg-white text-white">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: { xs: 'none', md: 'flex' },
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-              }}
-            >
-              <img src="/navbarLogo.png" alt="Logo" style={{ marginRight: '8px', marginTop: '10px', height: '4rem' }}/>
-            </Typography>
-
-            <Box
+          <Box
               sx={{
                 flexGrow: 1,
                 display: { xs: 'flex', md: 'none' },
@@ -73,6 +75,25 @@ function Navbar() {
                 <MenuIcon />
               </IconButton>
             </Box>
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                mr: 2,
+                display: { md: 'flex' },
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
+              <img src={isLGScreen?"navbarLogo.png":"logo.png"} alt="Logo" style={dynamicStyles}/>
+            </Typography>
+
+            
             <Box
               sx={{
                 display: { xs: 'none', md: 'flex' },
