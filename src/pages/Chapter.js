@@ -2,8 +2,8 @@
 
 function Chapter() {
   return (
-    <div className="block">
-hi
+    <div className="block text-4xl">
+      hi
     </div>
   );
 }

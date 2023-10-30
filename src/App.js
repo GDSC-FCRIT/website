@@ -4,6 +4,8 @@ import Main from './pages/Main';
 import Chapter from './pages/Chapter'; 
 import Team from './pages/Team';
 import Loader from './components/Loader/Loader';
+import Navbar from './components/Navbar';
+
 
 function App() {
 
@@ -22,14 +24,16 @@ function App() {
       <div className="block bg-App-bg bg-no-repeat bg-fixed overflow-auto bg-cover">
       {loading ? (
           <Loader />
-        ) : (
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/home" element={<Main />} />
-            <Route path="/chapter" element={<Chapter />} />
-            <Route path="/team" element={<Team />} />
-          </Routes>
-        )}
+        ) :(
+          <>
+      <Navbar/>
+        <Routes>
+          <Route path="/" element={<Main/>} />
+          <Route path="/chapter" element={<Chapter/>} /> 
+          <Route path="/team" element={<Team/>} /> 
+        </Routes>
+          </>
+          )}
       </div>
     </Router>
   );

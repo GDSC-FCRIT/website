@@ -41,7 +41,7 @@ function Navbar() {
               variant="h6"
               noWrap
               component="a"
-              href="#app-bar-with-responsive-menu"
+              href="/"
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
@@ -52,7 +52,7 @@ function Navbar() {
                 textDecoration: 'none',
               }}
             >
-              <img src="/navbarLogo.png" alt="Logo" style={{ marginRight: '8px', marginTop: '10px', height: '4rem' }} />
+              <img src="/navbarLogo.png" alt="Logo" style={{ marginRight: '8px', marginTop: '10px', height: '4rem' }}/>
             </Typography>
 
             <Box
@@ -95,7 +95,7 @@ function Navbar() {
       <CSSTransition in={isNavMenuOpen} timeout={300} classNames="menu" unmountOnExit>
         <div className="menu">
           {pages.map((page) => (
-            <MenuItem key={page} onClick={handleOpenNavMenu}>
+            <MenuItem key={page} onClick={handleOpenNavMenu} component={Link} to={`/${page.toLowerCase()}`}>
               {page}
             </MenuItem>
           ))}
