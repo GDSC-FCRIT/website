@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'App-bg': "url('/public/bg.png')",
+        // 'App-bg': "url('/public/bg.png')",
+        'join-bg': "url('/public/joinUsCircle.png')",
       },
       minHeight: {
         '1/2': '50vh',
@@ -27,6 +28,7 @@ module.exports = {
       },
       fontSize: {
         'faq': '2em',
+        'howwedo': '2em',
         'joinus-font': '1.2rem',
         'joinuswel': '2.3rem',
         'joinuswel-p': '1.3rem',
