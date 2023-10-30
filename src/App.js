@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Main from './pages/Main';
 import Chapter from './pages/Chapter'; 
 import Team from './pages/Team';
-
+import Loader from './components/Loader/Loader';
 import Navbar from './components/Navbar';
 
 
@@ -21,15 +21,19 @@ function App() {
 
   return (
     <Router>
-
+      <div className="block bg-App-bg bg-no-repeat bg-fixed overflow-auto bg-cover">
+      {loading ? (
+          <Loader />
+        ) :(
+          <>
       <Navbar/>
-      <div className="block bg-App-bg bg-no-repeat bg-fixed overflow-auto">
         <Routes>
           <Route path="/" element={<Main/>} />
           <Route path="/chapter" element={<Chapter/>} /> 
           <Route path="/team" element={<Team/>} /> 
         </Routes>
-
+          </>
+          )}
       </div>
     </Router>
   );
