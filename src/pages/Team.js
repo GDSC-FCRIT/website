@@ -1,7 +1,12 @@
+import OurTeam from "../components/OurTeam"
+import Footer from "../components/Footer"
+import Navbar from "../components/Navbar"
+
 function Team(){
     return(
         <div>
-            hi
+            <OurTeam/>
+            <Footer/>
         </div>
     )
 }
