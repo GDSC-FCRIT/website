@@ -126,7 +126,7 @@ const OurTeam = () => {
   </div>
   <div className="c2 text-center relative mx-4 my-4" style={{maxWidth: '300px'}}>
   <div className="flex items-center mb-6">
-  <img src='/teampics/head posts/karishma.jpg' alt='Karishma Rajput' className="mx-4 h-48 w-48 rounded-full" />
+  <img src='/teampics/head posts/karishma.jpeg' alt='Karishma Rajput' className="mx-4 h-48 w-48 rounded-full object-cover" />
         </div>
 
         <p className='font-medium'>Karishma Rajput</p>
@@ -141,7 +141,7 @@ const OurTeam = () => {
 </div>
 
 
-{/* 2 left 2 right */}
+{/* 1 left 2 right */}
 <div className="flex justify-center mt-12 flex-col md:flex-row">
 
   {/* Left */}
@@ -152,7 +152,7 @@ const OurTeam = () => {
 
       <div className="text-center relative mx-4 my-4" style={{maxWidth: '300px'}}>
         <div className="flex items-center mb-6">
-        <img src='/teampics/team - technical/3.png' alt='Technical' className="mx-4 h-48 w-48 rounded-full" />
+        <img src='/teampics/team - technical/3.png' alt='Technical' className="object-cover mx-4 h-48 w-48 rounded-full" />
         </div>
         <p className='font-medium'>Member 1</p>
         <div className="flex justify-center mb-4">
@@ -185,7 +185,7 @@ const OurTeam = () => {
 
       <div className="c2 text-center relative mx-4 my-4" style={{maxWidth: '300px'}}>
         <div className="flex items-center mb-6">
-        <img src='/teampics/team - creative/1.png' alt='Creative' className="mx-4 h-48 w-48 rounded-full" />
+        <img src='/teampics/team - creative/1.png' alt='Creative' className="object-cover mx-4 h-48 w-48 rounded-full" />
         </div>
         <p className='font-medium'>Member 1</p>
         <div className="flex justify-center mb-4">
@@ -211,18 +211,16 @@ const OurTeam = () => {
   </div>
 
 </div>
-
-  
-{/* 1 left 2 right */}
-<div className="flex justify-center mt-12 flex-col md:flex-row">
+<div className="w-10/12 flex justify-between mt-12 flex-col md:flex-row">
 
   {/* Left */}
-  <div className="w-full p-4 mx-8 text-center">
+  <div className="w-full md:w-1/2 p-4 text-center flex flex-col items-center justify-center mb-6 md:mb-0">
     <p className="font-bold text-xl mb-6">MANAGEMENT TEAM</p>
 
-    <div className="flex flex-col md:flex-row justify-center mb-4">
+    <div className="w-full flex flex-col md:flex-row justify-center mb-4">
 
-      <div className="c2 text-center relative mx-4 my-4" style={{maxWidth: '300px'}}>
+    
+      <div className="text-center relative mx-4 my-4" style={{maxWidth: '300px'}}>
         <div className="flex items-center mb-6">
         <img src='/teampics/team - management/9.png' alt='Tejashree Bhangale<' className="mx-4 h-48 w-48 rounded-full" />
         </div>
@@ -233,12 +231,13 @@ const OurTeam = () => {
           <img src='/footer/github.png' alt='Github' className="mx-1 h-7 w-7" />
         </div>
       </div>
+    
 
     </div>
   </div>
 
   {/* Right */}
-  <div className="w-full p-4 mx-8 text-center">
+  <div className="w-full md:w-1/2 p-4 text-center flex flex-col items-center justify-center">
     <p className="font-bold text-xl mb-6">EVENTS TEAM</p>
 
     <div className="flex flex-col md:flex-row justify-center mb-4">
@@ -271,6 +270,7 @@ const OurTeam = () => {
   </div>
 
 </div>
+
 
 
 
