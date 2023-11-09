@@ -6,6 +6,7 @@ import Team from './pages/Team';
 import Loader from './components/Loader/Loader';
 import Navbar from './components/Navbar';
 import Blogs from './pages/Blogs';
+import Contact from './pages/Contact';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/chapter" element={<Chapter/>} /> 
           <Route path="/team" element={<Team/>} /> 
           <Route path="/blogs" element={<Blogs/>} />
+          <Route path="/contact" element={<Contact/>}/>
         </Routes>
           </>
           )}
