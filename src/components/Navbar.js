@@ -17,7 +17,7 @@ import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import '../style/navbar.css';
 
-const pages = ['Home', 'Chapter', 'About Us', 'Team'];
+const pages = ['Home', 'Events', 'Team','Projects','Blogs','Contact'];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

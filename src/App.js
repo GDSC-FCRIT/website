@@ -5,7 +5,7 @@ import Chapter from './pages/Chapter';
 import Team from './pages/Team';
 import Loader from './components/Loader/Loader';
 import Navbar from './components/Navbar';
-
+import Blogs from './pages/Blogs';
 
 function App() {
 
@@ -29,8 +29,10 @@ function App() {
       <Navbar/>
         <Routes>
           <Route path="/" element={<Main/>} />
+          <Route path="/home" element={<Main/>} />
           <Route path="/chapter" element={<Chapter/>} /> 
           <Route path="/team" element={<Team/>} /> 
+          <Route path="/blogs" element={<Blogs/>} />
         </Routes>
           </>
           )}

@@ -16,24 +16,24 @@
     position:absolute;width:40px;height:40px;border-radius:9999px
 }
 .dot1{
-    top:55px;background-color:var(--color-blue);transform-origin:20px center;animation:dsc-dot1 6s infinite ease-in-out;z-index:2
+    top:55px;background-color:var(--color-blue);transform-origin:20px center;animation:dsc-dot1 3s infinite ease-in-out;z-index:2
 }
 .dot2{
-    left:62.5px;top:55px;background-color:var(--color-red);animation:dsc-dot2 6s infinite ease-in-out
+    left:62.5px;top:55px;background-color:var(--color-red);animation:dsc-dot2 3s infinite ease-in-out
 }
 .dot3{
-    bottom:0;left:62.5px;background-color:var(--color-green);animation:dsc-dot3 6s infinite ease-in-out
+    bottom:0;left:62.5px;background-color:var(--color-green);animation:dsc-dot3 3s infinite ease-in-out
 }
 .dot4{
-    left:62.5px;background-color:var(--color-green);animation:dsc-dot4 6s infinite ease-in-out
+    left:62.5px;background-color:var(--color-green);animation:dsc-dot4 3s infinite ease-in-out
 }
 .dot5{
-    left:62.5px;top:55px;background-color:var(--color-green);animation:dsc-dot5 6s infinite ease-in-out
+    left:62.5px;top:55px;background-color:var(--color-green);animation:dsc-dot5 3s infinite ease-in-out
 }
 .dot6{
-    left:62.5px;bottom:0;background-color:var(--color-yellow);animation:dsc-dot6 6s infinite ease-in-out
+    left:62.5px;bottom:0;background-color:var(--color-yellow);animation:dsc-dot6 3s infinite ease-in-out
 }
-.dot7{top:55px;background-color:var(--color-red);transform-origin:20px center;animation:dsc-dot7 6s infinite ease-in-out;z-index:1
+.dot7{top:55px;background-color:var(--color-red);transform-origin:20px center;animation:dsc-dot7 3s infinite ease-in-out;z-index:1
 }
 @keyframes dsc-dot1{
     0%,100%{opacity:0;transform:scale(0)}5%,95%{opacity:1;transform:scale(1)}25%,75%{width:40px}30%,70%{width:100px;transform:rotate(0)}35%,65%{transform:rotate(-30deg)}45%,55%{transform:rotate(30deg)}50%{width:100px;transform:rotate(30deg)}
