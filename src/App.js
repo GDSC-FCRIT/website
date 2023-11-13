@@ -6,7 +6,7 @@ import Team from './pages/Team';
 import Loader from './components/Loader/Loader';
 import Navbar from './components/Navbar';
 import Blogs from './pages/Blogs';
-
+import Events from './pages/Events';
 function App() {
 
   const [loading, setLoading] = useState(true);
@@ -30,6 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main/>} />
           <Route path="/home" element={<Main/>} />
+          <Route path = "/events" element={<Events />} />
           <Route path="/chapter" element={<Chapter/>} /> 
           <Route path="/team" element={<Team/>} /> 
           <Route path="/blogs" element={<Blogs/>} />
