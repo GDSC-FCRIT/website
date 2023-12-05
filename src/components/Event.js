@@ -46,7 +46,7 @@ const Event = () => {
               <img
                 src={event.img}
                 style={{ width: '100%', height: '20rem', objectFit: 'fill', borderRadius: '20px' , maxWidth : '600px'}}
-                alt="Event"
+                alt="Event"  
               />
               <div className="flex flex-col w-full md:ml-4">
                 <h3 className="text-white text-sm font-bold ml-2 mb-2 mt-4 mr-2">{event.type}</h3>
