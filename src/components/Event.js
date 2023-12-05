@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 const Event = () => {
   const [events, setEvents] = useState([]);
-
   useEffect(() => {
     import("../events.json")
       .then((response) => {
-        setEvents(response.default.slice(-4));
+        setEvents(response.default.slice(0,4));
       })
       .catch((error) => {
         console.log(error);
@@ -20,19 +19,13 @@ const Event = () => {
       <div className='flex flex-col flex-1 ml-20 mr-20'>
         {events.map((event, index) => (
           <div
-            className={`${
-              index === 0 ? 'bg-green-500' :
-                index === 1 ? 'bg-yellow-500' :
-                  index === 2 ? 'bg-blue-500' :
-                    index === 3 ? 'bg-red-500' :
-                      'bg-gray-200'
-            } flex flex-col md:flex-row mb-20`}
+            className={'flex flex-col md:flex-row mb-20'}
             style={{
               borderRadius: '30px',
             }}
             key={index}
           >
-            <div
+             <div
               className='flex flex-col flex-1 hidden md:flex'
               style={{
                 background: 'white',
@@ -42,20 +35,29 @@ const Event = () => {
               <p style={{ fontFamily: 'Poppins', fontSize: '70px', fontWeight: '500', lineHeight: '105px', letterSpacing: '0em', textAlign: 'justified', color: '#00000099', padding: '0px', margin: '0px' }}>{`${event.date} `}</p>
               <p style={{ fontFamily: 'Poppins', fontSize: '30px', fontWeight: '500', lineHeight: '45px', letterSpacing: '0em', textAlign: 'justified', color: '#00000099', padding: '0px', margin: '0px', alignSelf: 'center' }}>{`${event.month}`}</p>
             </div>
-            <img
-              src={event.img}
-              className="mb-4 md:mb-0 md:mr-4"
-              style={{ width: '100%', height: '20rem', objectFit: 'fill', borderRadius: '10px', background: 'white' }}
-              alt="Event"
-            />
-            <div className="flex flex-col" style={{ width: '100%' }}>
-              <h3 className="text-white text-sm font-bold ml-2 mb-2 mt-4">{event.type}</h3>
-              <h1 className="text-3xl text-white font-bold ml-2 mb-2 mt-2">{event.title}</h1>
-              <p className="text-base text-white ml-2 mb-2 mt-4">{event.desc}</p>
+            <div className={`${
+              index === 0 ? 'bg-green-500' :
+                index === 1 ? 'bg-yellow-500' :
+                  index === 2 ? 'bg-blue-500' :
+                    index === 3 ? 'bg-red-500' :
+                      'bg-gray-200'
+            } flex flex-col md:flex-row` }
+            style={{ borderRadius: '20px' , boxShadow : '0px 4px 4px 0px rgba(0, 0, 0, 0.25)' }}>
+              <img
+                src={event.img}
+                style={{ width: '100%', height: '20rem', objectFit: 'fill', borderRadius: '20px' , maxWidth : '600px'}}
+                alt="Event"
+              />
+              <div className="flex flex-col w-full md:ml-4">
+                <h3 className="text-white text-sm font-bold ml-2 mb-2 mt-4 mr-2">{event.type}</h3>
+                <h1 className="text-3xl text-white font-bold ml-2 mb-2 mt-2 mr-2">{event.title}</h1>
+                <p className="text-base text-white ml-2 mb-2 mt-4 mr-1">{event.desc}</p>
+              </div>
             </div>
           </div>
         ))}
-      </div>
+      </div>  
+      <button className= "bg-[#4285f4] [font-family:'Poppins-Medium',Helvetica] font-medium text-white text-[30px] mb-10" style={{width : '300px' , height : '69px' , borderRadius : '20px' , marginLeft : '8%' , boxShadow : '0px 4px 4px 0px rgba(0, 0, 0, 0.25)'}}>Past Events</button>
     </div>
   );
 };
