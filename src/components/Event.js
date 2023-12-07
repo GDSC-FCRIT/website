@@ -1,16 +1,31 @@
 import React, { useEffect, useState } from 'react';
-
+import '../events.json';
 const Event = () => {
   const [events, setEvents] = useState([]);
+  const [index,setIndex] = useState(4);
+  function load(){
+    console.log("before click",index)
+    setIndex(index + 4);
+    console.log("after click",index);
+  }
   useEffect(() => {
     import("../events.json")
       .then((response) => {
-        setEvents(response.default.slice(0,4));
+        if(index < response.length){
+          console.log(index,response.length)
+          setEvents(response.default.slice(0,index));
+        }
+        else{
+          console.log("Done");
+          setEvents(response.default.slice(0,response.length))
+          document.getElementById('load').style.display = 'none';
+        }
       })
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [index]);
+  
 
   return (
     <div>
@@ -36,10 +51,10 @@ const Event = () => {
               <p style={{ fontFamily: 'Poppins', fontSize: '30px', fontWeight: '500', lineHeight: '45px', letterSpacing: '0em', textAlign: 'justified', color: '#00000099', padding: '0px', margin: '0px', alignSelf: 'center' }}>{`${event.month}`}</p>
             </div>
             <div className={`${
-              index === 0 ? 'bg-green-500' :
-                index === 1 ? 'bg-yellow-500' :
-                  index === 2 ? 'bg-blue-500' :
-                    index === 3 ? 'bg-red-500' :
+              (index)%4 === 0 ? 'bg-green-500' :
+                (index)%4 === 1 ? 'bg-yellow-500' :
+                  (index)%4 === 2 ? 'bg-blue-500' :
+                    (index)%4 === 3 ? 'bg-red-500' :
                       'bg-gray-200'
             } flex flex-col md:flex-row` }
             style={{ borderRadius: '20px' , boxShadow : '0px 4px 4px 0px rgba(0, 0, 0, 0.25)' }}>
@@ -57,7 +72,7 @@ const Event = () => {
           </div>
         ))}
       </div>  
-      <button className= "bg-[#4285f4] [font-family:'Poppins-Medium',Helvetica] font-medium text-white text-[30px] mb-10" style={{width : '300px' , height : '69px' , borderRadius : '20px' , marginLeft : '8%' , boxShadow : '0px 4px 4px 0px rgba(0, 0, 0, 0.25)'}}>Past Events</button>
+      <button onClick={load} id = 'load' className= "bg-[#4285f4] [font-family:'Poppins-Medium',Helvetica] font-medium text-white text-[30px] mb-10" style={{width : '300px' , height : '69px' , borderRadius : '20px' , marginLeft : '8%' , boxShadow : '0px 4px 4px 0px rgba(0, 0, 0, 0.25)'}}>Past Events</button>
     </div>
   );
 };
