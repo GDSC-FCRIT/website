@@ -1,0 +1,42 @@
+[
+    {
+        "img": "/hacktober_event.png",
+        "type": "Workshop | Study Group",
+        "title": "Hacktober Connect",
+        "desc": "Ready to dive into the exciting world of open source contributions and celebrate the spirit of Hacktoberfest? Join us for an exciting session!",
+        "date": "15",
+        "month": "Oct"
+    },
+    {
+        "img": "/git_github_event.jpeg",
+        "type": "Workshop | Study Group",
+        "title": "Git and Github Workshop",
+        "desc": "Get ready to master basic Git commands, branch like a pro, conquer conflicts, and harness the power of GitHub for effective collaboration and open-source contributions.",
+        "date": "11",
+        "month": "Oct"
+    },
+    {
+        "img": "/opensource_event.jpeg",
+        "type": "Speaker Session | Tech Talk",
+        "title": "Intro to Open Source",
+        "desc": "Discover open source's essence, explore renowned programs like GSoC, MLH Fellowship, and Hacktoberfest, and learn how to embark on your own open source journey.",
+        "date": "02",
+        "month": "Oct"
+    },
+    {
+        "img": "/resume_event.png",
+        "type": "Info Session",
+        "title": "Art of Resume Making",
+        "desc": "Learn the essential art of crafting an impressive resume that stands out to potential employers. Join our informative event to gain valuable insights into creating a compelling and effective resume.",
+        "date": "10",
+        "month": "Sept"
+    } , 
+    {
+        "img": "/resume_event.png",
+        "type": "Info Session",
+        "title": "Art of Resume Making",
+        "desc": "Learn the essential art of crafting an impressive resume that stands out to potential employers. Join our informative event to gain valuable insights into creating a compelling and effective resume.",
+        "date": "10",
+        "month": "Sept"
+    }
+]
