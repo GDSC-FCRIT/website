@@ -28,7 +28,7 @@ const Event = () => {
   
 
   return (
-    <div>
+    <div className='p-4 pt-6'>
       <h1 className="font-poppins text-5xl font-semibold leading-14 tracking-tight text-black mb-8 mt-20 ml-20">Upcoming Events</h1>
       <h3 className="font-poppins text-2xl font-medium leading-7 text-justify text-black opacity-60 mb-6 ml-20">Check out what's new</h3>
       <div className='flex flex-col flex-1 ml-20 mr-20'>
@@ -56,11 +56,11 @@ const Event = () => {
                   (index)%4 === 2 ? 'bg-blue-500' :
                     (index)%4 === 3 ? 'bg-red-500' :
                       'bg-gray-200'
-            } flex flex-col md:flex-row` }
+            } flex flex-col md:flex-row m-5` }
             style={{ borderRadius: '20px' , boxShadow : '0px 4px 4px 0px rgba(0, 0, 0, 0.25)' }}>
               <img
                 src={event.img}
-                style={{ width: '100%', height: '20rem', objectFit: 'fill', borderRadius: '20px' , maxWidth : '600px'}}
+                style={{ maxWidth: '20rem',width:'100%', height: '20rem', objectFit: 'fill', borderRadius: '20px' ,}}
                 alt="Event"  
               />
               <div className="flex flex-col w-full md:ml-4">
