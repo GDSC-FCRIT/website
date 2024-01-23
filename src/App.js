@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Main from "./pages/Main";
-import Chapter from "./pages/Chapter";
-import Team from "./pages/Team";
-import Loader from "./components/Loader/Loader";
-import Navbar from "./components/Navbar";
-import Blogs from "./pages/Blogs";
-import Contact from "./pages/Contact";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Main from './pages/Main';
+import Chapter from './pages/Chapter'; 
+import Team from './pages/Team';
+import Loader from './components/Loader/Loader';
+import Navbar from './components/Navbar';
+import Blogs from './pages/Blogs';
+import Contact from './pages/Contact';
+import Events from './pages/Events';
+
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -25,15 +27,16 @@ function App() {
           <Loader />
         ) : (
           <>
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Main />} />
-              <Route path="/home" element={<Main />} />
-              <Route path="/chapter" element={<Chapter />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="/blogs" element={<Blogs />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
+      <Navbar/>
+        <Routes>
+          <Route path="/" element={<Main/>} />
+          <Route path="/home" element={<Main/>} />
+          <Route path = "/events" element={<Events />} />
+          <Route path="/chapter" element={<Chapter/>} /> 
+          <Route path="/team" element={<Team/>} /> 
+          <Route path="/blogs" element={<Blogs/>} />
+          <Route path="/contact" element={<Contact/>}/>
+        </Routes>
           </>
         )}
       </div>
