@@ -33,35 +33,36 @@ function Navbar() {
     }
   };
 
-  const [isLGScreen, setIsLGScreen] = useState(window.matchMedia('(min-width: 1024px)').matches);
+  const [isLGScreen, setIsLGScreen] = useState(
+    window.matchMedia("(min-width: 1024px)").matches
+  );
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(min-width: 1024px)');
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
     const updateScreenSize = () => setIsLGScreen(mediaQuery.matches);
 
-    mediaQuery.addEventListener('change', updateScreenSize);
+    mediaQuery.addEventListener("change", updateScreenSize);
     return () => {
-      mediaQuery.removeEventListener('change', updateScreenSize);
+      mediaQuery.removeEventListener("change", updateScreenSize);
     };
   }, []);
 
   const dynamicStyles = {
-    marginRight: '8px',
-    marginTop: '10px',
-    height: isLGScreen ? '4rem' : '2rem',
+    marginRight: "8px",
+    marginTop: "10px",
+    height: isLGScreen ? "4rem" : "2rem",
   };
 
-  
   return (
     <div>
       <AppBar position="fixed" className="bg-white text-white">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-          <Box
+            <Box
               sx={{
                 flexGrow: 1,
-                display: { xs: 'flex', md: 'none' },
-                alignItems: 'center',
+                display: { xs: "flex", md: "none" },
+                alignItems: "center",
               }}
             >
               <IconButton
@@ -82,29 +83,37 @@ function Navbar() {
               href="/"
               sx={{
                 mr: 2,
-                display: { md: 'flex' },
-                fontFamily: 'monospace',
+                display: { md: "flex" },
+                fontFamily: "monospace",
                 fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
               }}
             >
-              <img src={isLGScreen?"navbarLogo.png":"logo.png"} alt="Logo" style={dynamicStyles}/>
+              <img
+                src={isLGScreen ? "navbarLogo.png" : "logo.png"}
+                alt="Logo"
+                style={dynamicStyles}
+              />
             </Typography>
 
-            
             <Box
               sx={{
-                display: { xs: 'none', md: 'flex' },
-                alignItems: 'center',
-                justifyContent: 'flex-end',
+                display: { xs: "none", md: "flex" },
+                alignItems: "center",
+                justifyContent: "flex-end",
                 flexGrow: 1,
                 paddingRight: 2,
               }}
             >
               {pages.map((page) => (
-                 <Button key={page} sx={{ color: 'black', ml: 2 }} component={Link} to={`/${page.toLowerCase()}`}>
+                <Button
+                  key={page}
+                  sx={{ color: "black", ml: 2 }}
+                  component={Link}
+                  to={`/${page.toLowerCase()}`}
+                >
                   {page}
                 </Button>
               ))}
@@ -112,11 +121,21 @@ function Navbar() {
           </Toolbar>
         </Container>
       </AppBar>
-      
-      <CSSTransition in={isNavMenuOpen} timeout={300} classNames="menu" unmountOnExit>
+
+      <CSSTransition
+        in={isNavMenuOpen}
+        timeout={300}
+        classNames="menu"
+        unmountOnExit
+      >
         <div className="menu">
           {pages.map((page) => (
-            <MenuItem key={page} onClick={handleOpenNavMenu} component={Link} to={`/${page.toLowerCase()}`}>
+            <MenuItem
+              key={page}
+              onClick={handleOpenNavMenu}
+              component={Link}
+              to={`/${page.toLowerCase()}`}
+            >
               {page}
             </MenuItem>
           ))}
@@ -126,7 +145,6 @@ function Navbar() {
         <div className="overlay" onClick={handleOpenNavMenu}></div>
       )}
     </div>
- 
   );
 }
 

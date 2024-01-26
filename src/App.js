@@ -10,7 +10,6 @@ import Contact from './pages/Contact';
 import Events from './pages/Events';
 
 function App() {
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -24,9 +23,9 @@ function App() {
   return (
     <Router>
       <div className="block bg-App-bg bg-no-repeat bg-fixed overflow-auto bg-cover">
-      {loading ? (
+        {loading ? (
           <Loader />
-        ) :(
+        ) : (
           <>
       <Navbar/>
         <Routes>
@@ -39,7 +38,7 @@ function App() {
           <Route path="/contact" element={<Contact/>}/>
         </Routes>
           </>
-          )}
+        )}
       </div>
     </Router>
   );
